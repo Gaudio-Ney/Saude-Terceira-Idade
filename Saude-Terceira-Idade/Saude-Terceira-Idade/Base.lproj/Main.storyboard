@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fXH-Xs-SPR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
@@ -7,22 +7,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home Principal-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Saude_Terceira_Idade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDf-Mv-dVH">
+                                <rect key="frame" x="0.0" y="76" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxn-N3-qpG">
+                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Idosos Descolados" id="QnE-l9-sbV"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home Principal" id="fjt-83-oNg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="41"/>
+            <point key="canvasLocation" x="913" y="919"/>
         </scene>
-        <!--Item 2-->
+        <!--Configurações-->
         <scene sceneID="xQo-Rz-AXX">
             <objects>
                 <viewController id="ehM-Di-EkW" sceneMemberID="viewController">
@@ -32,13 +47,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="wp2-Ly-J8F"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="1Y4-Ei-M8A"/>
+                    <tabBarItem key="tabBarItem" title="Configurações" id="1Y4-Ei-M8A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WP9-pG-hbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1833" y="364"/>
         </scene>
-        <!--Item 1-->
+        <!--Chat-->
         <scene sceneID="Q0m-bg-Ufl">
             <objects>
                 <viewController id="FJj-CN-Q2l" sceneMemberID="viewController">
@@ -48,7 +63,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="E6V-rg-x9w"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8vW-lX-cNM"/>
+                    <tabBarItem key="tabBarItem" title="Chat" id="8vW-lX-cNM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CAN-uA-BTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,6 +79,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Okq-hp-STq"/>
                         <segue destination="FJj-CN-Q2l" kind="relationship" relationship="viewControllers" id="LZd-BO-dkS"/>
                         <segue destination="ehM-Di-EkW" kind="relationship" relationship="viewControllers" id="Jj7-as-lOg"/>
                     </connections>
